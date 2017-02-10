@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Conversion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,53 +21,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="212" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOz-Vq-Djy">
-                                <rect key="frame" x="132" y="28" width="111" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uiz-z9-J7s">
-                                <rect key="frame" x="34" y="120" width="306" height="43"/>
+                                <rect key="frame" x="35" y="106" width="306" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uam-Zn-7HS">
-                                <rect key="frame" x="128" y="185" width="119" height="43"/>
+                                <rect key="frame" x="129" y="157" width="119" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy2-pZ-Z62">
-                                <rect key="frame" x="129" y="228" width="117" height="84"/>
+                                <rect key="frame" x="130" y="208" width="117" height="84"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rec-r8-QcX">
+                                <rect key="frame" x="63" y="14" width="250" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="2C4-iQ-R6Y"/>
+                                </constraints>
+                                <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="EfQ-LB-9h9"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Xik-e9-gaR"/>
+                                </connections>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwk-Gr-RtW">
-                                <rect key="frame" x="60" y="312" width="254" height="43"/>
+                                <rect key="frame" x="61" y="290" width="254" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="QOz-Vq-Djy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4p9-fM-Com"/>
+                            <constraint firstItem="rec-r8-QcX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-6" id="9wc-fZ-CW7"/>
                             <constraint firstItem="Iwk-Gr-RtW" firstAttribute="centerX" secondItem="Uiz-z9-J7s" secondAttribute="centerX" id="A7a-o0-ZQR"/>
-                            <constraint firstItem="Iwk-Gr-RtW" firstAttribute="top" secondItem="Gy2-pZ-Z62" secondAttribute="bottom" id="AF0-H6-dbu"/>
-                            <constraint firstItem="Gy2-pZ-Z62" firstAttribute="top" secondItem="uam-Zn-7HS" secondAttribute="bottom" id="OId-Hh-xM6"/>
+                            <constraint firstItem="Iwk-Gr-RtW" firstAttribute="top" secondItem="Gy2-pZ-Z62" secondAttribute="bottom" constant="-2" id="AF0-H6-dbu"/>
+                            <constraint firstItem="Uiz-z9-J7s" firstAttribute="top" secondItem="rec-r8-QcX" secondAttribute="bottom" constant="8" id="IHT-OZ-OBc"/>
+                            <constraint firstItem="Gy2-pZ-Z62" firstAttribute="top" secondItem="uam-Zn-7HS" secondAttribute="bottom" constant="8" id="OId-Hh-xM6"/>
                             <constraint firstItem="uam-Zn-7HS" firstAttribute="centerX" secondItem="Uiz-z9-J7s" secondAttribute="centerX" id="Qs6-pa-1co"/>
-                            <constraint firstItem="QOz-Vq-Djy" firstAttribute="centerX" secondItem="Uiz-z9-J7s" secondAttribute="centerX" id="Ve4-ga-vnS"/>
-                            <constraint firstItem="Uiz-z9-J7s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="XG1-Pw-2al"/>
+                            <constraint firstItem="Uiz-z9-J7s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="86" id="XG1-Pw-2al"/>
+                            <constraint firstItem="rec-r8-QcX" firstAttribute="centerX" secondItem="Uiz-z9-J7s" secondAttribute="centerX" id="YtD-R9-Ztn"/>
+                            <constraint firstItem="rec-r8-QcX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bpU-cD-san"/>
                             <constraint firstItem="Gy2-pZ-Z62" firstAttribute="centerX" secondItem="Uiz-z9-J7s" secondAttribute="centerX" id="diT-f4-2OO"/>
-                            <constraint firstItem="QOz-Vq-Djy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="r2D-9n-jTW"/>
-                            <constraint firstItem="uam-Zn-7HS" firstAttribute="top" secondItem="Uiz-z9-J7s" secondAttribute="bottom" constant="22" id="wlf-UU-htg"/>
+                            <constraint firstItem="uam-Zn-7HS" firstAttribute="top" secondItem="Uiz-z9-J7s" secondAttribute="bottom" constant="8" id="wlf-UU-htg"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hI1-nV-Zzf" appends="YES" id="4c9-gX-496"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="Gy2-pZ-Z62" id="zHZ-98-3hb"/>
+                        <outlet property="textField" destination="rec-r8-QcX" id="x8i-Zd-pda"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hI1-nV-Zzf">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="oh7-zS-hDs"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
